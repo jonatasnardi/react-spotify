@@ -1,0 +1,96 @@
+@import "../../Styles/styles.scss";
+
+.home {
+  .search-label {
+    font-size: 16px;
+    color: $terciary;
+    padding: 0 5px;
+  }
+
+  .box-search {
+    margin-bottom: 50px;
+
+    .input-search {
+      font-size: 48px;
+      background: transparent;
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid $gray-light;
+      color: $white;
+      padding: 10px 5px;
+
+      @include maxWidth(768) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .box-result {
+    .result-label {
+      font-size: 24px;
+      color: $terciary;
+      padding: 0 5px;
+    }
+  }
+  
+  .albums-group {
+    list-style: none;
+    margin-top: 20px;
+    @include clearfix();
+
+    .album-item {
+      width: 20%;
+      padding: 0 10px;
+      float: left;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        background: lighten($secondary, 7%);
+      }
+
+      @include maxWidth(991) {
+        width: 50%;
+      }
+
+      .container-image {
+        height: 230px;
+        margin: 0 auto;
+
+        @include maxWidth(991) {
+          width: 170px;
+        }
+
+        @include maxWidth(480) {
+          width: auto;
+        }
+      }
+
+      .album-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .container-text {
+        min-height: 85px;
+      }
+
+      .album-title {
+        font-size: 16px;
+        color: $terciary;
+        text-align: center;
+        min-height: 34px;
+        max-height: 34px;
+        margin-bottom: 10px;
+      }
+
+      .album-artist {
+        font-size: 16px;
+        color: $terciary;
+        text-align: center;
+        min-height: 34px;
+        max-height: 34px;
+      }
+    }
+  }
+}
