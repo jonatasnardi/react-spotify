@@ -89,7 +89,7 @@ class Album extends Component {
         <div className="box-album-tracks">
           <ul className="group-tracks">
             { albumTracks && albumTracks.map((track, i) => (
-                <li key={track} className={'track-item'} onClick={() => this.playMusic(track.preview_url)}>
+                <li key={track + i} className={'track-item'} onClick={() => this.playMusic(track.preview_url)}>
                   <div className="container-text">
                     <span className="track-index">{i + 1}.</span>
                     <span className="track-title">{track.name}</span>
