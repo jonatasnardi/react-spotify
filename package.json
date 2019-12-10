@@ -103,14 +103,15 @@
       "!src/**/*.d.ts"
     ],
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "<rootDir>/src/__tests__/setup.js"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js",
-      "<rootDir>/__tests__/setup.js"
+      "<rootDir>/src/__tests__/setup.js"
     ],
     "testMatch": [
-      "<rootDir>/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}"
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
